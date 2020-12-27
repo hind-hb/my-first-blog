@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+
+
+{%block content%}
+
+
+<nav class="navbar navbar-default  "   style="width: 97%; background-color: rgba(255,255,255,0.5);">
+  <div class="container-fluid">
+    <div class="row">
+    <div class="col-sm">
+    <div class="navbar-header"  >
+
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-green">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Decapolis</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+
+              <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'signin' %}">sign in</a>
+        </li>
+
+                   <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'signup' %}"> sign up  </a>{{email}}
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#"></a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Department</a></li>
+            <li><a class="dropdown-item" href="#">Employee</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#"> Compnay</a></li>
+          </ul>
+        </li>
+
+      </ul>
+        <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+
+
+  </div>
+
+
+
+
+</nav>
+    </div>
+    </div>
+    </div>
+<br /><br />
+      <br /><br />
+
+
+    <div class="container">
+
+  <div class="row ">
+    <div class="col ">
+      <div class="col py-3 px-lg-5 border bg-light">
+        <h1>FOOD SAFETY AND QUALITY ASSURANCE TRACEABILITY SOLUTION USING BLOCKCHAIN TECHNOLOGY </h1>
+
+        <p>
+           Decapolis provides a platform for certification the quality of food to food producers worldwide. The mission of Decapolis is to provide guaranteed premium goods for which the end-to-end supply chain complies with strict quality control standards. Quality is guaranteed by means of an unbroken chain of tamper-proof records of quality assessment at each stage of the production and delivery processes.
+
+Using their mobile phone, the end-customer at the point of sale is able to view the provenance of the food product and certification at each stage. This will positively influence the consumer for trust in the Decapolis Certification Brand and help to make the decision to buy the premium product.
+        </p>
+    </div>
+
+
+<br /><br />
+        <br /><br />
+
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+</body>
+</div>
+</div>
+</div>
+
+
+
+    <div class="container">
+
+  <div class="row ">
+    <div class="col ">
+      <div class="col py-3 px-lg-5 border bg-light">
+      <form action="add_employee" method="post">
+        {%csrf_token%}
+      <input class="form-control form-control-lg" type="text" placeholder="name" name="content" >
+             <input class="form-control form-control-lg" type="text" placeholder="address" name="content" >
+             <input class="form-control form-control-lg" type="text" placeholder="department"  name="content">
+             <button type="button" class="btn btn-primary">Primary</button>
+
+</form>
+</div>
+    </div>
+  </div>
+    </div>
+
+
+</div>
+</div>
+{%endblock content%}
